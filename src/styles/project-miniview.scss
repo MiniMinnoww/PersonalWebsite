@@ -1,0 +1,25 @@
+@import "custom";
+
+.project-mini-view {
+  border: none !important;
+  background-color: transparent;
+
+  .accordion-button {
+    color: $dark !important;
+    box-shadow: none !important;
+    border: none;
+    background-color: transparent !important;
+    padding-left: 15px;
+  }
+
+  .accordion-body {
+    background-color: transparent;
+    padding-left: 25px;
+    border: none;
+  }
+
+  .accordion-header.section-title {
+    background-color: $secondary;
+    border: none;
+  }
+}

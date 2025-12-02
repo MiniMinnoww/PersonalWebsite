@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+$primary: #25dca1 !default;
+$secondary: #86bfeb !default;
+$success: #14ea40 !default;
+$danger: #ee4e4e !default;
+$warning: #ffb836 !default;
+$info: #647ee6 !default;
+$light: #f8f9fa !default;
+$dark: #041812 !default;
+
+$body-bg: #f3fdfa !default;
+$border-radius: 10px !default;
+
+@import "bootstrap/scss/bootstrap";
+
+
+body {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 20;
+  font-style: normal;
+}
+
+main {
+  margin: 10px;
+  font-size: 150%
+}
+
+a {
+  text-decoration: none;
+  color: $light;
+}
+
+.padding-15 {
+  padding: 15px;
+}
+
+.centered-text {
+  width: 100%;
+  text-align: center;
+}
+
+.section-title {
+  background-color: $secondary;
+  padding: 0 10px;
+}
+
+pri {
+  color: $primary;
+}
+
+sec {
+  color: $secondary;
+}
+
+acc {
+  color: $info;
+}
+
+p {
+  line-height: 90%;
+}
+
+ul {
+  line-height: 90%;
+}
