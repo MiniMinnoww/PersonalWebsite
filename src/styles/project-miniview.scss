@@ -1,5 +1,8 @@
 @import "custom";
 
+.accordion-item {
+  background-color: $body-bg-transparent !important;
+}
 .project-mini-view {
   border: none !important;
   background-color: transparent;

@@ -1,6 +1,7 @@
 import type {ProjectData} from "./ProjectData.ts";
 
 import beardbariansBackground from "../assets/BB_Title.jpg"
+import imageSiteBackground from "../assets/IMAGESITE_1.png"
 
 export function projectData(){
   return {
@@ -21,7 +22,10 @@ function beardbariansData(): ProjectData {
 function imageSiteData(): ProjectData {
   return ({
     name: "Image Site",
-    tagline: "(a website for sharing photos with my friends)",
-    description: "A website with a Flask backend and a HTML & JS frontend which allowed me and my friends to upload and view images of us having fun!"
+    tagline: "(a website for sharing photos with my friends [WIP])",
+    description: "A website with a Flask backend and a HTML & JS frontend which allowed me and my friends to upload and view images of us having fun!",
+    backgroundImage: imageSiteBackground
   })
 }
+
+// TODO: Song app, HackSheffield9, HackSheffield10,

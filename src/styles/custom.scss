@@ -10,6 +10,7 @@ $light: #f8f9fa !default;
 $dark: #041812 !default;
 
 $body-bg: #f3fdfa !default;
+$body-bg-transparent: #f3fdfa55 !default;
 $border-radius: 10px !default;
 
 @import "bootstrap/scss/bootstrap";
@@ -78,11 +79,6 @@ main {
   font-size: 150%
 }
 
-a {
-  text-decoration: none;
-  color: $light;
-}
-
 .padding-15 {
   padding: 15px;
 }
@@ -107,4 +103,12 @@ p {
 
 ul {
   line-height: 90%;
+}
+
+li {
+  transition: transform 0.25s ease-in-out;
+}
+
+li:hover {
+  transform: translateX(5px);
 }

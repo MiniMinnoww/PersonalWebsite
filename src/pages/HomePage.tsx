@@ -4,6 +4,9 @@ import ProjectMiniView from "../components/ProjectMiniView.tsx";
 import { projectData } from "../projects/Projects.ts";
 import bb1 from "../assets/BB_1.jpg";
 import bb2 from "../assets/BB_2.jpg";
+
+import im1 from "../assets/IMAGESITE_1.png";
+import im2 from "../assets/IMAGESITE_2.png";
 import { dispatchCustomEvent } from "../utils/WindowUtils.ts";
 
 function HomePage() {
@@ -60,11 +63,28 @@ function HomePage() {
         
       }}>
         <ProjectMiniView data={projectData().beardbarians}>
-          <FigureImage alt="An image of beardbarians" src={bb1} width={"50%"}></FigureImage>
-          <FigureImage alt="An image of beardbarians" src={bb2} width={"50%"}></FigureImage>
+          <FigureImage alt="An image of beardbarians" src={bb1} width={"50%"}/>
+          <FigureImage alt="An image of beardbarians" src={bb2} width={"50%"}/>
+          <p>
+            I developed this game over the 2 years of doing my A levels, alongside Matthew Collier and Josh Bacon.
+            Learnt a lot about game development & object-oriented programming!
+
+            Find the game on&nbsp;
+              <a href="https://store.steampowered.com/app/3169290/Beardbarians" target="_blank">Steam</a>
+            &nbsp;or&nbsp;
+              <a href="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-download-software/Beardbarians-2662443.html" target="_blank">Nintendo Switch (™)</a>
+          </p>
         </ProjectMiniView>
 
-        <ProjectMiniView data={projectData().imagesite}/>
+        <ProjectMiniView data={projectData().imagesite}>
+          <FigureImage alt="An image of image site" src={im1} width={"50%"}/>
+          <FigureImage alt="An image of image site" src={im2} width={"50%"}/>
+          <p>
+            I want to revisit this fun project with my newly-learnt skills in typescript & react. I think it was a really cool idea, and we even got as far as adding
+            face-recognition to sort by person. However, the frontend being served by the same server that was processing all the images made the site feel very slow,
+            so I want to go back and run it separately with react.
+          </p>
+        </ProjectMiniView>
       </Accordion>
     </div>
   )
