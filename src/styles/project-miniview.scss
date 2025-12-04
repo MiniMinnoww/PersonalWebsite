@@ -4,7 +4,7 @@
   border: none !important;
   background-color: transparent;
 
-  .accordion-button {
+  .accordion-button { // Default accordion button
     color: $dark !important;
     box-shadow: none !important;
     border: none;
@@ -18,8 +18,13 @@
     border: none;
   }
 
-  .accordion-header.section-title {
+  .accordion-header.section-title { // Actual button/header
     background-color: $secondary;
+    border: none;
+  }
+
+  .accordion-header.section-title:hover { // Actual button/header
+    background-color: transparent;
     border: none;
   }
 }
