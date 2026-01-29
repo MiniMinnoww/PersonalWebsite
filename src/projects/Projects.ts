@@ -2,11 +2,15 @@ import type {ProjectData} from "./ProjectData.ts";
 
 import beardbariansBackground from "../assets/BB_Title.jpg"
 import imageSiteBackground from "../assets/IMAGESITE_1.png"
+import songAppBackground from "../assets/SONGAPP_1.png"
+import etaBackground from "../assets/ETA_BACKGROUND.png"
 
 export function projectData(){
   return {
     beardbarians: beardbariansData(),
-    imagesite: imageSiteData()
+    imagesite: imageSiteData(),
+    songapp: songAppData(),
+    eta: etaData()
   }
 }
 
@@ -28,4 +32,21 @@ function imageSiteData(): ProjectData {
   })
 }
 
-// TODO: Song app, HackSheffield9, HackSheffield10,
+function songAppData(): ProjectData {
+  return ({
+    name: "Song App",
+    tagline: "(a physical app for my live music performances [WIP])",
+    description: "Designed to run on a RaspberryPi, this app lets me add setlists, view chords for songs, and adjust settings. I made a prototype out of cardboard and I'm waiting on a better screen to use before I go any further",
+    backgroundImage: songAppBackground
+  })
+}
+
+function etaData(): ProjectData {
+  return ({
+    name: "ETA",
+    tagline: "(I won a game jam!)",
+    description: "Me and a couple friends participated in a 24 hour game jam at my Uni, and our game 'ETA' won!",
+    backgroundImage: etaBackground
+  })
+}
+// TODO: HackSheffield9, HackSheffield10, ETA

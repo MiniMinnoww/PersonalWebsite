@@ -11,7 +11,7 @@ nav {
   background-color: $dark;
 }
 
-.navbar-element {
+.navbar-div {
   flex: 1;
   text-align: center;
   font-size: 20pt;
@@ -20,15 +20,28 @@ nav {
 
   background-color: $dark;
 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
   transition: transform 0.25s ease-in-out, border-radius 0.25s ease-out;
 }
 
-.navbar-element:hover {
-  transform: translateY(20px);
+.navbar-div:hover {
+  transform: translateY(50%);
   border-radius: 20px;
 }
 
-a.navbar-element {
+.navbar-div > a {
   text-decoration: none;
   color: $light;
+}
+
+.navbar-sub-element {
+  text-align: center;
+  font-size: 15pt;
+
+  padding: 5px;
+
+  background-color: $dark;
 }

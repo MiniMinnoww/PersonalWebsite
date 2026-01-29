@@ -93,7 +93,7 @@ main {
   padding: 0 10px;
 }
 
-span.accent {
+p b {
   color: $info;
 }
 
@@ -111,4 +111,10 @@ li {
 
 li:hover {
   transform: translateX(5px);
+}
+
+.center-all {
+  align-content: center;
+  justify-content: center;
+  width: 100%;
 }
