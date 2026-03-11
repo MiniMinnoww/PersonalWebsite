@@ -1,0 +1,31 @@
+﻿@import "custom";
+
+.grid-view {
+  width: 100%;
+}
+
+.grid-view-element {
+  border-radius: 25px;
+  border: 1px solid black;
+
+  transition: all 0.25s ease-in-out;
+}
+
+.grid-view-element:hover {
+  background-color: $secondary;
+  box-shadow: 4px 4px 0 black;
+}
+
+.grid-view-element > h4 {
+  text-decoration: underline;
+}
+
+.grid-view-element > .tagline {
+  font-style: italic;
+  font-size: 1em;
+}
+
+.grid-view-element > .main-image {
+  padding: 0 10px;
+  border-radius: 25px;
+}

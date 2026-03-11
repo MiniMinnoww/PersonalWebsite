@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { Accordion, FigureImage } from "react-bootstrap";
+import {Accordion, Col, Container, FigureImage, Row} from "react-bootstrap";
 import ProjectMiniView from "../components/ProjectMiniView.tsx";
 import { projectData } from "../projects/Projects.ts";
 import bb1 from "../assets/BB_1.jpg";
@@ -29,34 +29,45 @@ function HomePage() {
       <h1 className="centered-text">Welcome!</h1>
 
       <p className="padding-15">
-        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <b>Computer Science at the University of Sheffield</b>.
+        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <a className="subtle-link" href="https://sheffield.ac.uk/undergraduate/courses/2027/computer-science-bsc"><b>Computer Science at the University of Sheffield</b></a>.
 
         I love to make my own personal projects, and also enjoy the various subjects that my University has to offer!
 
         I've recently been learning a bit of <b>React</b> and <b>TypeScript</b>, alongside developing my <b>C#</b> skills while battling with
         <b> Unity NGO</b>.
-
-        My programming skills include:
       </p>
-        <ul id="skills">
-          <li>Python</li>
-          <li>C#</li>
-          <li>Java</li>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React.js</li>
-          <li>HTML & CSS</li>
-          <li>Ruby</li>
-        </ul>
+      <Container>
+        <Row>
+          <Col className="center-horizontally text-center">
+            <h4>Programming Skills:</h4>
 
-      <p>and I have other key knowledge such as</p>
-        <ul>
-          <li>Git/Github</li>
-          <li>OOP</li>
-          <li>Microsoft Office</li>
-          <li>Unit Testing</li>
-          <li>Agile</li>
-        </ul>
+            <ul id="skills">
+              <li>Python</li>
+              <li>C#</li>
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React.js</li>
+              <li>HTML & CSS</li>
+              <li>Ruby</li>
+            </ul>
+          </Col>
+          <Col className="center-horizontally text-center">
+            <h4>Other Knowledge:</h4>
+
+            <ul>
+              <li>Git/Github</li>
+              <li>OOP</li>
+              <li>Microsoft Office</li>
+              <li>Unit Testing</li>
+              <li>Agile</li>
+            </ul>
+          </Col>
+        </Row>
+      </Container>
+
+
+
 
       <p>
         Some of my proudest projects include:

@@ -17,7 +17,6 @@ $border-radius: 10px !default;
 
 
 body {
-  font-family: "Jersey 10", sans-serif;
   font-weight: 20;
   font-style: normal;
 
@@ -76,7 +75,7 @@ body {
 
 main {
   margin: 10px;
-  font-size: 150%
+  font-size: 100%
 }
 
 .padding-15 {
@@ -88,21 +87,29 @@ main {
   text-align: center;
 }
 
-.section-title {
-  background-color: $secondary;
-  padding: 0 10px;
-}
 
 p b {
   color: $info;
 }
 
-p {
-  line-height: 90%;
+.center-horizontally {
+  //align-content: center;
+  width: 100%;
 }
 
-ul {
-  line-height: 90%;
+.list-inside {
+  list-style: inside;
+}
+
+a.subtle-link {
+  text-decoration: none;
+  font-weight: unset;
+
+  transition: text-decoration 0.5s ease-in-out;
+}
+
+a.subtle-link:hover {
+  text-decoration: underline;
 }
 
 li {

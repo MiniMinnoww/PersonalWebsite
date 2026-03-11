@@ -3,4 +3,5 @@ export interface ProjectData {
   tagline: string,
   description: string,
   backgroundImage?: string
+  images?: string[]
 }

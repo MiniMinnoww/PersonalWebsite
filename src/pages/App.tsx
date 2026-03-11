@@ -5,6 +5,7 @@ import Navbar from "../components/navbar/Navbar.tsx";
 import FadedBackground from "../components/FadedBackground.tsx";
 import {useEffect, useState} from "react";
 import CVPage from "./CVPage.tsx";
+import ProjectsPage from "./ProjectsPage.tsx";
 
 function App() {
   const [bg, setBg] = useState<string | null>(null);
@@ -30,6 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/cv" element={<CVPage/>}/>
+            <Route path="/projects" element={<ProjectsPage/>}/>
         </Routes>
       </main>
     </BrowserRouter>

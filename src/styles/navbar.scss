@@ -20,9 +20,13 @@ nav {
 
   background-color: $dark;
 
-  display: flex;
+  display: inline;
   justify-content: center;
   flex-direction: column;
+
+  position: relative;
+
+  margin-bottom: 4px;
 
   transition: transform 0.25s ease-in-out, border-radius 0.25s ease-out;
 }
@@ -37,11 +41,28 @@ nav {
   color: $light;
 }
 
+.navbar-dropdown > a {
+  text-decoration: none;
+  color: $light;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
 .navbar-sub-element {
   text-align: center;
   font-size: 15pt;
 
-  padding: 5px;
+  border-radius: 20px;
+
+  padding: 15px;
+  border-top: 5px transparent;
+
+  display: block;
 
   background-color: $dark;
 }
