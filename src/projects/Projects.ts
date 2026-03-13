@@ -4,6 +4,10 @@ import beardbariansBackground from "../assets/BB_Title.jpg"
 import imageSiteBackground from "../assets/IMAGESITE_1.png"
 import songAppBackground from "../assets/SONGAPP_1.png"
 import etaBackground from "../assets/ETA_BACKGROUND.png"
+import ppBackground from "../assets/PP_BACKGROUND.png"
+
+import pp1 from "../assets/PP_1.png";
+import pp2 from "../assets/PP_2.png";
 
 import bb1 from "../assets/BB_1.jpg";
 import bb2 from "../assets/BB_2.jpg";
@@ -19,11 +23,23 @@ import eta2 from "../assets/ETA_1.png";
 
 export function projectData(){
   return {
+    perspectiveprotectors: perspectiveProtectorsData(),
     beardbarians: beardbariansData(),
     imagesite: imageSiteData(),
     songapp: songAppData(),
     eta: etaData()
   }
+}
+
+function perspectiveProtectorsData(): ProjectData {
+  return ({
+    name: "Perspective Protectors [WIP]",
+    tagline: "A (very and current WIP) top-down tower defence game where you can become the towers and fight with them in an FPS-style mode",
+    description: "A tower-defence game where you are battling against an army of unique robots. The main premise of the game is that you can switch between the top-down mode and the first-person mode." +
+      "When a wave starts, all players become a tower and fight as that tower in a fast-paced FPS style mode. It uses Unity NGO for networking, and has a custom solution that allows any number of local and online players to play together!",
+    backgroundImage: ppBackground,
+    images: [pp1, pp2]
+  })
 }
 
 function beardbariansData(): ProjectData {

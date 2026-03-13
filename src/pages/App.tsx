@@ -6,6 +6,7 @@ import FadedBackground from "../components/FadedBackground.tsx";
 import {useEffect, useState} from "react";
 import CVPage from "./CVPage.tsx";
 import ProjectsPage from "./ProjectsPage.tsx";
+import Footer from "../components/footer/Footer.tsx";
 
 function App() {
   const [bg, setBg] = useState<string | null>(null);
@@ -34,6 +35,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage/>}/>
         </Routes>
       </main>
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -15,10 +15,17 @@ import eta1 from "../assets/ETA_1.jpg";
 import eta2 from "../assets/ETA_1.png";
 
 import { dispatchCustomEvent } from "../utils/WindowUtils.ts";
+import SubtleLink from "../components/SubtleLink.tsx";
 
 function HomePage() {
   // Track which accordion items are open
   const [activeKey, setActiveKey] = useState("")
+
+  const bscLink = "https://sheffield.ac.uk/undergraduate/courses/2027/computer-science-bsc"
+  const csLink = "https://learn.microsoft.com/en-us/dotnet/csharp/"
+  const ngoLink = "https://docs.unity3d.com/Packages/com.unity.netcode.gameobjects@2.10/manual/index.html"
+  const tsLink = "https://www.typescriptlang.org/"
+  const reactLink = "https://react.dev/"
 
   useEffect(() => {
     if (!activeKey) dispatchCustomEvent("setBackground", undefined)
@@ -29,12 +36,11 @@ function HomePage() {
       <h1 className="centered-text">Welcome!</h1>
 
       <p className="padding-15">
-        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <a className="subtle-link" href="https://sheffield.ac.uk/undergraduate/courses/2027/computer-science-bsc"><b>Computer Science at the University of Sheffield</b></a>.
+        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <SubtleLink text="Computer Science at the University of Sheffield" href={bscLink}/>.
 
         I love to make my own personal projects, and also enjoy the various subjects that my University has to offer!
 
-        I've recently been learning a bit of <b>React</b> and <b>TypeScript</b>, alongside developing my <b>C#</b> skills while battling with
-        <b> Unity NGO</b>.
+        I've recently been learning a bit of <SubtleLink text="React" href={reactLink}/> and <SubtleLink text="TypeScript" href={tsLink}/>, alongside developing my <SubtleLink text="C#" href={csLink}/> skills while battling with <SubtleLink text="Unity NGO" href={ngoLink}/>.
       </p>
       <Container>
         <Row>
