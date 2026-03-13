@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import CVPage from "./CVPage.tsx";
 import ProjectsPage from "./ProjectsPage.tsx";
 import Footer from "../components/footer/Footer.tsx";
+import SpecificProject from "./SpecificProject.tsx";
 
 function App() {
   const [bg, setBg] = useState<string | null>(null);
@@ -32,7 +33,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/cv" element={<CVPage/>}/>
-            <Route path="/projects" element={<ProjectsPage/>}/>
+          <Route path="/projects/:name" element={<SpecificProject/>}/>
+          <Route path="/projects" element={<ProjectsPage/>}/>
         </Routes>
       </main>
       <Footer/>

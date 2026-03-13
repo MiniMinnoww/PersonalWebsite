@@ -10,7 +10,7 @@ function ProjectGridViewElement({project}: ProjectGridViewElementProps) {
     const nav = useNavigate()
 
     return (
-        <div className="grid-view-element" onClick={() => nav(`/projects/${project.name}`)}>
+        <div className="grid-view-element" onClick={() => nav(`/projects/${project.id}`)}>
             <h4 className="text-center">{project.name}</h4>
             <p className="text-center tagline">{project.tagline}</p>
 

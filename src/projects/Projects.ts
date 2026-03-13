@@ -31,8 +31,14 @@ export function projectData(){
   }
 }
 
+export function getProjectDataById(id: string): ProjectData | undefined {
+  const allProjects = Object.values(projectData());
+  return allProjects.find(project => project.id.toLowerCase() === id.toLowerCase());
+}
+
 function perspectiveProtectorsData(): ProjectData {
   return ({
+    id: "perspectiveprotectors",
     name: "Perspective Protectors [WIP]",
     tagline: "A (very and current WIP) top-down tower defence game where you can become the towers and fight with them in an FPS-style mode",
     description: "A tower-defence game where you are battling against an army of unique robots. The main premise of the game is that you can switch between the top-down mode and the first-person mode." +
@@ -44,6 +50,7 @@ function perspectiveProtectorsData(): ProjectData {
 
 function beardbariansData(): ProjectData {
   return ({
+    id: "beardbarians",
     name: "Beardbarians",
     tagline: "(a commercially released platform-fighting game)",
     description: "Prepare your hair to attack, smack and knock back anyone who dares oppose you in Beardbarians! Pick from a colourful cast of characters and stages to duke it out with friends, locally or online, or work together to protect your gem from goblins by upgrading your abilities in the tower defence mode!",
@@ -54,6 +61,7 @@ function beardbariansData(): ProjectData {
 
 function imageSiteData(): ProjectData {
   return ({
+    id: "imagesite",
     name: "Image Site",
     tagline: "(a website for sharing photos with my friends [WIP])",
     description: "A website with a Flask backend and a HTML & JS frontend which allowed me and my friends to upload and view images of us having fun!",
@@ -64,6 +72,7 @@ function imageSiteData(): ProjectData {
 
 function songAppData(): ProjectData {
   return ({
+    id: "songapp",
     name: "Song App",
     tagline: "(a physical app for my live music performances [WIP])",
     description: "Designed to run on a RaspberryPi, this app lets me add setlists, view chords for songs, and adjust settings. I made a prototype out of cardboard and I'm waiting on a better screen to use before I go any further",
@@ -74,6 +83,7 @@ function songAppData(): ProjectData {
 
 function etaData(): ProjectData {
   return ({
+    id: "eta",
     name: "ETA",
     tagline: "(I won a game jam!)",
     description: "Me and a couple friends participated in a 24 hour game jam at my Uni, and our game 'ETA' won!",
