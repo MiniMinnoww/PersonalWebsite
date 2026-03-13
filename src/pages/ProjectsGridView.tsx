@@ -9,6 +9,7 @@ interface ProjectsGridViewProps {
 
 function ProjectsGridView({columns, projects}: ProjectsGridViewProps) {
     const rows = Math.ceil(projects.length / columns)
+    const colSize = 12 / columns
 
     return (
         <div className="grid-view">
@@ -20,7 +21,7 @@ function ProjectsGridView({columns, projects}: ProjectsGridViewProps) {
                 return (
                     <Row key={rowIndex} className="mb-4">
                         {rowProjects.map(project =>
-                            <Col key={project.name} className="d-flex">
+                            <Col key={project.name} md={colSize} className="d-flex">
                                 <ProjectGridViewElement project={project}></ProjectGridViewElement>
                             </Col>
                         )}
