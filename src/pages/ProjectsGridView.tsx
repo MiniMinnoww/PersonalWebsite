@@ -20,7 +20,7 @@ function ProjectsGridView({columns, projects}: ProjectsGridViewProps) {
                 return (
                     <Row key={rowIndex} className="mb-4">
                         {rowProjects.map(project =>
-                            <Col key={project.name}>
+                            <Col key={project.name} className="d-flex">
                                 <ProjectGridViewElement project={project}></ProjectGridViewElement>
                             </Col>
                         )}
