@@ -1,0 +1,52 @@
+﻿@import "custom";
+
+.project-title {
+  width: 100%;
+  text-align: center;
+
+  background: $secondary;
+}
+
+.project-tagline {
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.project-carousel {
+  width: 60%;
+  border-radius: 3px;
+  margin: auto;
+  border: 5px solid $dark;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+  }
+}
+
+
+#project-description-and-images-div {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  margin-top: 30px;
+
+  > p {
+    background-color: $body-bg-transparent;
+    width: 40%;
+    margin: 0 0 0 15px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+
+    > p {
+      width: 100%;
+      padding: 0 0 15px 0; // adjust spacing for stacked layout
+    }
+  }
+}

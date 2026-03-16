@@ -1,9 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./HomePage";
-import Navbar from "../components/Navbar.tsx";
+import Navbar from "../components/navbar/Navbar.tsx";
 import FadedBackground from "../components/FadedBackground.tsx";
 import {useEffect, useState} from "react";
+import CVPage from "./CVPage.tsx";
+import ProjectsPage from "./ProjectsPage.tsx";
+import Footer from "../components/footer/Footer.tsx";
+import SpecificProject from "./SpecificProject.tsx";
 
 function App() {
   const [bg, setBg] = useState<string | null>(null);
@@ -28,8 +32,12 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage/>}/>
+          <Route path="/cv" element={<CVPage/>}/>
+          <Route path="/projects/:name" element={<SpecificProject/>}/>
+          <Route path="/projects" element={<ProjectsPage/>}/>
         </Routes>
       </main>
+      <Footer/>
     </BrowserRouter>
   );
 }

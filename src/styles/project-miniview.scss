@@ -15,6 +15,17 @@
     padding-left: 15px;
   }
 
+  .section-title {
+    background-color: $secondary;
+    padding: 0 10px;
+
+    transition: all 0.25s ease-in-out;
+  }
+
+  .section-title:hover {
+    box-shadow: 4px 4px 0 black;
+  }
+
   .accordion-body {
     background-color: transparent;
     padding-left: 25px;
