@@ -1,0 +1,26 @@
+﻿@import "custom";
+
+.hobbies-div {
+  width: 90%;
+  margin: auto;
+
+  padding: 15px;
+
+  box-shadow: 0 0 4px $primary;
+  border-radius: $border-radius;
+}
+
+
+#magic-smoke-album-cover {
+  border-radius: $border-radius;
+  &::after {
+    content: "Magic Smoke Album";
+  }
+}
+
+#three-wise-photo {
+  border-radius: $border-radius;
+  &::after {
+    content: "3 Wise Monkeys Gig";
+  }
+}

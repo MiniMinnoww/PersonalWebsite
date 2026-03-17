@@ -1,9 +1,12 @@
 import {useEffect, useState} from "react";
-import {Accordion, Col, Container, FigureImage, Row} from "react-bootstrap";
+import {Accordion, Col, Container, Figure, FigureImage, Row} from "react-bootstrap";
 import ProjectMiniView from "../components/ProjectMiniView.tsx";
 import { projectData } from "../projects/Projects.ts";
+import "../styles/home.scss";
+import "../styles/custom.scss";
 import bb1 from "../assets/BB_1.jpg";
 import bb2 from "../assets/BB_2.jpg";
+import bbBackground from "../assets/BB_Title.jpg"
 
 import im1 from "../assets/IMAGESITE_1.png";
 import im2 from "../assets/IMAGESITE_2.png";
@@ -16,6 +19,8 @@ import eta2 from "../assets/ETA_1.png";
 
 import { dispatchCustomEvent } from "../utils/WindowUtils.ts";
 import SubtleLink from "../components/SubtleLink.tsx";
+import voyageImage from "../assets/hobbies/3_WISE_2.jpeg";
+import {useNavigate} from "react-router-dom";
 
 function HomePage() {
   // Track which accordion items are open
@@ -27,6 +32,8 @@ function HomePage() {
   const tsLink = "https://www.typescriptlang.org/"
   const reactLink = "https://react.dev/"
 
+  const nav = useNavigate()
+
   useEffect(() => {
     if (!activeKey) dispatchCustomEvent("setBackground", undefined)
   }, [activeKey]);
@@ -35,9 +42,33 @@ function HomePage() {
     <div className="align-content-center">
       <h1 className="centered-text">Welcome!</h1>
 
-      <p className="padding-15">
-        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <SubtleLink text="Computer Science at the University of Sheffield" href={bscLink}/>.
+      <p className="padding-15 text-center mx-5">
+        Hello! My name is <b>Matthew Salmon</b> and I am a student studying <SubtleLink text="Computer Science at the University of Sheffield" href={bscLink}/>,
+        who also enjoys <SubtleLink href="/about/hobbies#music" text="music"/> and <SubtleLink href="/about/hobbies#squash" text="squash"/>
+      </p>
 
+      <div className="d-flex flex-row gap-5 center-all">
+
+        <Figure className="intro-image-container" onClick={() => nav("/about/hobbies#music")}>
+          <FigureImage src={voyageImage}/>
+          <Figure.Caption>Playing with my band at the 3 Wise Monkeys, Colchester</Figure.Caption>
+        </Figure>
+
+        <Figure className="intro-image-container" onClick={() => nav("/projects/eta")}>
+          <FigureImage src={eta2} className="intro-image"/>
+          <Figure.Caption>ETA - A game I made in under 24 hours</Figure.Caption>
+        </Figure>
+
+        <Figure className="intro-image-container" onClick={() => nav("/projects/beardbarians")}>
+          <FigureImage src={bbBackground} className="intro-image"/>
+          <Figure.Caption>A commercial game I released on Steam!</Figure.Caption>
+        </Figure>
+
+      </div>
+
+      <br/><br/>
+
+      <p>
         I love to make my own personal projects, and also enjoy the various subjects that my University has to offer!
 
         I've recently been learning a bit of <SubtleLink text="React" href={reactLink}/> and <SubtleLink text="TypeScript" href={tsLink}/>, alongside developing my <SubtleLink text="C#" href={csLink}/> skills while battling with <SubtleLink text="Unity NGO" href={ngoLink}/>.
@@ -67,16 +98,16 @@ function HomePage() {
               <li>Microsoft Office</li>
               <li>Unit Testing</li>
               <li>Agile</li>
+              <li>Piano</li>
+              <li>Squash</li>
             </ul>
           </Col>
         </Row>
       </Container>
 
 
-
-
       <p>
-        Some of my proudest projects include:
+        Some of my proudest computer science projects include:
       </p>
 
       <Accordion activeKey={activeKey} onSelect={(key) => {
