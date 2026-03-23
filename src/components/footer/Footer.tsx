@@ -6,9 +6,9 @@ function Footer() {
   const githubLink = "https://github.com/MiniMinnoww"
   return (
     <footer>
-      <a className="footer-link" href={linkedInLink}>LinkedIn</a>
-      <a className="footer-link" href={githubLink}>GitHub</a>
-      <a className="footer-link" href={uniLink}>University</a>
+      <a className="footer-link" href={linkedInLink} target="_blank">LinkedIn</a>
+      <a className="footer-link" href={githubLink} target="_blank">GitHub</a>
+      <a className="footer-link" href={uniLink} target="_blank">University</a>
     </footer>
   )
 }

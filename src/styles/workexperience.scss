@@ -1,0 +1,19 @@
+﻿@import "custom";
+
+.work-experience-div {
+  width: 90%;
+  margin: auto;
+
+  padding: 15px;
+
+  box-shadow: 4px 4px 6px $secondary;
+  border-radius: $border-radius;
+  background-color: $body-bg-transparent;
+
+  transition: all ease-in-out 0.25s;
+
+  &:hover {
+    box-shadow: 0 0 0 4px $secondary;
+    transform: scale(1.01);
+  }
+}

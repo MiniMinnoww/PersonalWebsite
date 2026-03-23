@@ -9,6 +9,7 @@ import ProjectsPage from "./ProjectsPage.tsx";
 import Footer from "../components/footer/Footer.tsx";
 import SpecificProject from "./SpecificProject.tsx";
 import Hobbies from "./Hobbies.tsx";
+import WorkExperience from "./WorkExperience.tsx";
 
 function App() {
   const [bg, setBg] = useState<string | null>(null);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/cv" element={<CVPage/>}/>
           <Route path="/about/hobbies" element={<Hobbies/>}/>
+          <Route path="/about/workexperience" element={<WorkExperience/>}/>
           <Route path="/projects/:name" element={<SpecificProject/>}/>
           <Route path="/projects" element={<ProjectsPage/>}/>
         </Routes>
